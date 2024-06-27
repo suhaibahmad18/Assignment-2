@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  .train {
+    width: 400px;
+    position: relative;
+    animation: moveTrain 5s linear infinite;
+  }
+  
+  @keyframes moveTrain {
+    0% { left: -200px; }
+    100% { left: 100%; }
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+<script>
+  let animationInterval;
+
+  function startAnimation() {
+    // Start the animation
+    let train = document.getElementById("train");
+    train.style.animationPlayState = "running";
+  }
+
+  function stopAnimation() {
+    // Stop the animation
+    let train = document.getElementById("train");
+    train.style.animationPlayState = "paused";
+  }
+</script>
+</head>
+<body>
+
+  
+  <img src="train.jpg" alt="Train" class="train" id="train" height="250">
+  <h2 style="color: blue;">Click the following buttons to handle train animation</h2>
+  <div class="button-container">
+    <button onclick="startAnimation()">Start</button>
+    <button onclick="stopAnimation()">Stop</button>
+  </div>
+</body>
+</html>

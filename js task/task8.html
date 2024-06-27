@@ -1,0 +1,194 @@
+
+<html>
+    <head>
+        <title>
+            task 8
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  rel="stylesheet">
+        <style>
+            .ri{text-align:right}
+            span{color:red;font-weight:bold;text-transform:uppercase}
+        </style>
+    </head>
+    <body >
+        
+    <center>
+        <div class="" style="background-image: linear-gradient(rgb(234, 202, 134), rgb(169, 88, 164));border:2px solid rgb(189, 59, 159);width:70%;margin-left:200px;">
+        <center>
+        <h1 style="color:blue">Registration form</h1>
+        <form>
+        <table cellpadding="4" cellspacing="0">
+        <tr>
+            <td class="ri">First Name</td>
+            <td><input type="text" name="fname" style="width:100%" id="fn"></td>
+            <td><span id="l1"></span></td>
+            </tr>
+            
+            <tr>
+            <td class="ri">Last Name</td>
+            <td><input type="text"  style="width:100%" name="lname" id="ln"></td>
+            <td><span id="l2"></span></td>
+            </tr>
+            
+            <tr>
+            <td class="ri">Email</td>
+            <td><input type="text" style="width:100%" name="email" id="em"></td>
+            <td><span id="l3"></span></td>
+            </tr>
+            
+            <tr>
+            <td class="ri">Password</td>
+            <td><input type="password" style="width:100%" name="pwd" id="pwd"></td>
+            <td><span id="l4"></span></td>
+            </tr>
+            
+            <tr>
+                <td class="ri">Re-enter password</td>
+                <td><input type="password" style="width:100%" name="rpwd" id="rpwd"></td>
+                <td><span id="l5"></span></td>
+            </tr>
+                
+            <tr>
+                <td rowspan="2" class="ri">Gender</td>
+                <td><input type="radio" id="ma" value="male" name="gen">
+                <label for="ma">Male</label></td>
+                </tr>
+
+                <tr>
+                    <td><input type="radio" id="fe" value="female" name="gen">
+                    <label for="ma">Female</label></br></br></td>
+                </tr>
+                    
+                <tr>
+                    <td class="ri">Age</td>
+                    <td><input type="text" style="width:100%" name="age" id="ag"></td>
+                    <td><span id="l6"></span></td>
+                </tr>
+                    
+                <tr>
+                    <td class="ri">Phone number</td>
+                    <td><input type="text" style="width:100%"  name="mob" id="mob"></td>
+                    <td><span id="l7"></span></td>
+                </tr>
+                    
+                <tr>
+                    <td class="ri">Address</td>
+                    <td><textarea id="add" name="add" cols="60" rows="7"></textarea></td>
+                    <td><span id="l8"></span></td>
+                </tr>
+                <tr>
+                    <td class="ri">State</td>
+                    <td><input type="text" style="width:100%" name="state" id="st"></td>
+                    <td><span id="l9"></span></td>
+                </tr>
+                        
+                <tr>
+                    <td class="ri">Country</td>
+                    <td><select name="se" id="cou">
+                    <option value="choose your country">Choose your country</option></select></td>
+                </tr>
+                        
+                <tr>
+                    <td class="ri">Languages known</td>
+                    <td>
+                    <input type="checkbox" name="lang" value="english" id="eng">
+                    <label for="eng">English</label>
+                    <input type="checkbox" name="lang" value="Kannada" id="kan">
+                    <label for="kan">Kannada</label>
+                    <input type="checkbox" name="lang" value="Hindi" id="hin">
+                    <label for="hin">Hindi</label>
+                    <input type="checkbox" name="lang" value="Telugu" id="tel">
+                    <label for="tel">Telugu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" checked="checked" id="ch">
+                        <label id=gg for="ch">Here I declared all the given details are true</label>
+                        </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p style="text-align:right">log in to <a href=#a>Ethnus</a> website</p></td>
+                    </tr>
+                    </table>
+                    <input type="submit" value="REGISTER" style="border-radius:10px;width:80px"  class="bg-danger text-white">
+                    </form>
+                    </center>
+                    </div>
+                <h1 id="tem"></h1>
+
+                <script>
+                    var x=0;
+                    setInterval(()=>{
+                    let fn=document.getElementById("fn").value;
+                    let ln=document.getElementById("ln").value;
+                    let em=document.getElementById("em").value;
+                    let pwd=document.getElementById("pwd").value;
+                    let rpwd=document.getElementById("rpwd").value;
+                    let age=document.getElementById("ag").value;
+                    let pn=document.getElementById("mob").value;
+                    let add=document.getElementById("add").value;
+                    let sta=document.getElementById("st").value;
+                    if(fn==""){
+                    document.getElementById("l1").innerHTML="Poor";
+                    }
+                    else{
+                    document.getElementById("l1").innerHTML="";
+                    }
+                                
+                    if(ln==""){
+                        document.getElementById("l2").innerHTML="Poor";
+                        }
+                        else{
+                        document.getElementById("l2").innerHTML="";
+                        }
+                        
+                        if(em==""){
+                        document.getElementById("l3").innerHTML="Poor";
+                        }
+                        else{
+                            document.getElementById("l3").innerHTML="";
+                            }
+                            
+                            if(pwd==""){
+                            document.getElementById("l4").innerHTML="Poor";
+                            }
+                            else{
+                            document.getElementById("l4").innerHTML="";
+                            }
+                            
+                            if(rpwd=="" ||rpwd!=pwd){
+                            document.getElementById("l5").innerHTML="Poor or mismatch";
+                            }
+                            else{
+                                document.getElementById("l5").innerHTML="";
+                                }
+                                if(age==""){
+                                    document.getElementById("l6").innerHTML="Poor";
+                                    }
+                                    else{
+                                    document.getElementById("l6").innerHTML="";
+                                    }
+                                    
+                                    if(pn==""){
+                                    document.getElementById("l7").innerHTML="Poor";
+                                    }
+                                    else{
+                                    document.getElementById("l7").innerHTML="";
+                                    }
+                                    if(add==""){
+                                        document.getElementById("l8").innerHTML="Poor";
+                                        }
+                                        else{
+                                        document.getElementById("l8").innerHTML="";
+                                        }
+                                        if(sta==""){
+                                            document.getElementById("l9").innerHTML="Poor";
+                                            }
+                                            else{
+                                            document.getElementById("l9").innerHTML="";
+                                            }
+                                        },10)        
+        </script>
+</body>
+</html>                                                                                                                                                                                                                                                                                                                            
